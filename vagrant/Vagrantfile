@@ -53,5 +53,5 @@ Vagrant.configure(2) do |config|
      #vb.customize ["modifyvm", :id, "--accelerate3d", "on"]
   end
   
-  config.vm.provision "shell", path: "https://raw.githubusercontent.com/CognitiveComputingResearchGroup/flagship-project/master/vagrant/provision/setup.sh", privileged: false
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/CognitiveComputingResearchGroup/common-ccrgdev/master/vagrant/provision/setup.sh", privileged: false
 end
