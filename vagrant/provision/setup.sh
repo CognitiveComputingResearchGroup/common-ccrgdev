@@ -7,7 +7,6 @@
 #################
 # Preliminaries #
 #################
-
 ## Added to resolve an apt-get issue that occurs when installing packages in
 ## non-interactive mode. The issue is documented in more detail here
 ## (http://serverfault.com/questions/500764/dpkg-reconfigure-unable-to-re-open-stdin-no-file-or-directory)
@@ -51,7 +50,6 @@ sudo apt-get -qq -y install firefox &>>/var/tmp/vagrant_prov.log
 ## Install pip (Python package manager)
 sudo echo "Installing PIP (Python package manager)" | tee -a /var/tmp/vagrant_prov.log
 sudo apt-get -qq -y install build-essential python-dev &>>/var/tmp/vagrant_prov.log
-
 sudo apt-get -qq -y install python-pip &>>/var/tmp/vagrant_prov.log
 
 ## Install jupyter (Python Notebooks)
