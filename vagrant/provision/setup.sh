@@ -51,6 +51,7 @@ sudo apt-get -qq -y install firefox &>>/var/tmp/vagrant_prov.log
 ## Install pip (Python package manager)
 sudo echo "Installing PIP (Python package manager)" | tee -a /var/tmp/vagrant_prov.log
 sudo apt-get -qq -y install build-essential python-dev &>>/var/tmp/vagrant_prov.log
+
 sudo apt-get -qq -y install python-pip &>>/var/tmp/vagrant_prov.log
 
 ## Install jupyter (Python Notebooks)
@@ -89,6 +90,9 @@ sudo echo "Setting up bash environment" | tee -a /var/tmp/vagrant_prov.log
 CCRG_DEV_ROOT=/home/vagrant/Development/ccrg
 
 mkdir -p $CCRG_DEV_ROOT
+
+cd $CCRG_DEV_ROOT
+git clone https://github.com/CognitiveComputingResearchGroup/lidapy-framework.git
 
 ##################
 # Update .bashrc #
