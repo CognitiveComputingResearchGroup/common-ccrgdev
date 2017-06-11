@@ -42,6 +42,7 @@ sudo apt-get install -qq -y git &>>/var/tmp/vagrant_prov.log
 sudo echo "Installing Xfce4 (desktop environment)" | tee -a /var/tmp/vagrant_prov.log
 sudo apt-get install -qq -y dictionaries-common &>>/var/tmp/vagrant_prov.log
 sudo apt-get install -qq -y xfce4 &>>/var/tmp/vagrant_prov.log
+sudo apt-get install -qq -y gnome-icon-theme-full tango-icon-theme &>>/var/tmp/vagrant_prov.log
 
 ## Install firefox (browser)
 sudo echo "Installing Firefox (browser)" | tee -a /var/tmp/vagrant_prov.log
