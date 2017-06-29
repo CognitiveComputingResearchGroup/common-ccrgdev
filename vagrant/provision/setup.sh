@@ -13,16 +13,19 @@
 sudo ex +"%s@DPkg@//DPkg" -cwq /etc/apt/apt.conf.d/70debconf
 sudo dpkg-reconfigure debconf -f noninteractive -p critical
 
-## Setup PPAs and Alternate download locations
+## Setup PPAs and Alternate download locations ##
+
 # Java
 sudo apt-add-repository -y ppa:webupd8team/java &>>/var/tmp/vagrant_prov.log
+
 # PyCharm
-sudo add-apt-repository -y ppa:ubuntu-desktop/ubuntu-make
-sudo apt-get update
-sudo apt-get install -y ubuntu-make
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu $(lsb_release -cs)-getdeb apps" > /etc/apt/sources.list.d/getdeb-apps.list'
+wget -q -O- http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+
 # ROS
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 0xB01FA116 &>>/var/tmp/vagrant_prov.log
+
 
 ## Accepting license agreements
 echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
@@ -64,7 +67,7 @@ sudo apt-get install -y -qq oracle-java8-installer &>>/var/tmp/vagrant_prov.log
 
 ## Install PyCharm (Python IDE)
 sudo echo "Installing PyCharm (Python IDE)" | tee -a /var/tmp/vagrant_prov.log
-umake ide pycharm &>>/var/tmp/vagrant_prov.log
+sudo apt-get install pycharm &>>/var/tmp/vagrant_prov.log
 
 ## Install ROS
 sudo echo "Installing ROS (the robot OS)" | tee -a /var/tmp/vagrant_prov.log
