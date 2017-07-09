@@ -80,11 +80,6 @@ sudo apt-get install -y python-rosinstall &>>/var/tmp/vagrant_prov.log
 
 sudo apt-get install -y ros-jade-rosbridge-server &>>/var/tmp/vagrant_prov.log
 
-# Install gazebo
-sudo echo "Installing Gazebo (3d simulation environment)" | tee -a /var/tmp/vagrant_prov.log
-sudo apt-get install -y gazebo5 &>>/var/tmp/vagrant_prov.log
-sudo apt-get install -y ros-jade-gazebo-ros-pkgs &>>/var/tmp/vagrant_prov.log
-
 #####################
 # Setup environment #
 #####################
