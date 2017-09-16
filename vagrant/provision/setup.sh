@@ -67,7 +67,7 @@ sudo apt-get install -y -qq oracle-java8-installer &>>/var/tmp/vagrant_prov.log
 
 ## Install PyCharm (Python IDE)
 sudo echo "Installing PyCharm (Python IDE)" | tee -a /var/tmp/vagrant_prov.log
-sudo apt-get install pycharm &>>/var/tmp/vagrant_prov.log
+sudo apt-get install -y pycharm &>>/var/tmp/vagrant_prov.log
 
 ## Install ROS
 sudo echo "Installing ROS (the robot OS)" | tee -a /var/tmp/vagrant_prov.log
