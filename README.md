@@ -6,7 +6,8 @@ This repository contains a common ccrg development environment.
 ### Setup
  - Clone the repository to your computer. (For help on that [click here](https://help.github.com/articles/cloning-a-repository/).)
  - Install Vagrant on your computer. (For help on that [click here](https://www.vagrantup.com/docs/installation/).)
- - Install VirtualBox on your computer. (For help on that [click here](https://www.virtualbox.org/wiki/Downloads).)
+ - Install VirtualBox on your computer. ***Please be aware that the latest versions of VirtualBox may not be supported by Vagrant.*** 
+ (For help on that [click here](https://www.vagrantup.com/docs/virtualbox/).)
  - Open a console window. Terminal on Mac and Linux. CommandPrompt on Windows (or PowerShell, who knows these days)
  - Go to the `common-ccrgdev/vagrant` directory using cd command. 
  - Run `vagrant up`
